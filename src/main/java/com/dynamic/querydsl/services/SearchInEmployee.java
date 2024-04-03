@@ -16,8 +16,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.StreamSupport;
 
-import static java.lang.System.err;
-
 @Service
 @RequiredArgsConstructor
 public class SearchInEmployee {

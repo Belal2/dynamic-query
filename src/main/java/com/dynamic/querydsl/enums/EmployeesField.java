@@ -3,6 +3,7 @@ package com.dynamic.querydsl.enums;
 import com.dynamic.entity.QEmployee;
 import com.dynamic.querydsl.FieldEnum;
 import com.querydsl.core.types.dsl.BooleanExpression;
+
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.function.Function;

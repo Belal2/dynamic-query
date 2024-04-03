@@ -15,8 +15,6 @@ import java.math.BigDecimal;
 @Table(name = "jobs", schema = "public")
 @Getter
 @Setter
-//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "jobId")
-//@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @EqualsAndHashCode
 public class Job {
 

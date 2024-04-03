@@ -14,8 +14,6 @@ import java.time.Instant;
 @Table(name = "employees", schema = "public")
 @Getter
 @Setter
-//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "employeeId")
-//@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @EqualsAndHashCode
 public class Employee {
@@ -44,8 +42,6 @@ public class Employee {
     @Column(name = "commission_pct", precision = 2, scale = 2)
     private BigDecimal commissionPct;
 
-//    @Column(name = "manager_id")
-//    private Long managerId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "department_id", referencedColumnName = "department_id")

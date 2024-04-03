@@ -1,11 +1,9 @@
 package com.dynamic.querydsl;
-import com.dynamic.entity.QEmployee;
+
 import com.querydsl.core.types.Predicate;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.core.types.dsl.Expressions;
 import com.querydsl.core.types.dsl.PathBuilder;
-import com.querydsl.core.types.dsl.StringPath;
-import org.springframework.data.querydsl.binding.QuerydslBindings;
 
 import java.util.Map;
 public class FilterQueryBuilder {
@@ -17,7 +15,6 @@ public class FilterQueryBuilder {
         for (E fieldEnum : enumClass.getEnumConstants()) {
             Object filterValue = filters.get(fieldEnum.getFieldName());
             if (filterValue != null) {
-//                BooleanExpression expression = fieldEnum.getPredicateFactory().apply(filterValue);
                 BooleanExpression expression = fieldEnum.getPredicateBuilder().build(path,filterValue);
                 result = result == null ? expression : result.and(expression);
             }
@@ -37,7 +34,5 @@ public class FilterQueryBuilder {
         }
         return result;
     }
-
-
 
 }

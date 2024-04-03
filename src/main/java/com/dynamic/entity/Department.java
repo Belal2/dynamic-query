@@ -13,8 +13,6 @@ import java.util.List;
 @Table(name = "departments", schema = "public")
 @Getter
 @Setter
-//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "departmentId")
-//@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @EqualsAndHashCode
 public class Department {
 
@@ -25,12 +23,6 @@ public class Department {
 
     @Column(name = "department_name", length = 30, nullable = false)
     private String departmentName;
-
-//    @Column(name = "manager_id")
-//    private Long managerId;
-
-//    @Column(name = "location_id")
-//    private Long locationId;
 
     @OneToMany(mappedBy = "department",fetch = FetchType.LAZY)
     @JsonManagedReference

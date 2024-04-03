@@ -12,8 +12,6 @@ import java.sql.Timestamp;
 @Table(name = "job_history", schema = "public")
 @Getter
 @Setter
-//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "employeeId")
-//@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @EqualsAndHashCode
 public class JobHistory {
 
@@ -27,12 +25,6 @@ public class JobHistory {
 
     @Column(name = "end_date", nullable = false)
     private Timestamp endDate;
-
-//    @Column(name = "job_id", length = 10, nullable = false)
-//    private String jobId;
-
-//    @Column(name = "department_id")
-//    private Long departmentId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "department_id", referencedColumnName = "department_id")

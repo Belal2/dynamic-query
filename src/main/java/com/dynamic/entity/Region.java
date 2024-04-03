@@ -12,8 +12,6 @@ import java.util.List;
 @Table(name = "regions", schema = "public")
 @Getter
 @Setter
-//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "regionId")
-//@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @EqualsAndHashCode
 public class Region {
 

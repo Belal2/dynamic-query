@@ -13,8 +13,6 @@ import java.util.List;
 @Table(name = "locations", schema = "public")
 @Getter
 @Setter
-//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "locationId")
-//@JsonInclude(JsonInclude.Include.NON_EMPTY)
 @EqualsAndHashCode
 public class Location {
 
@@ -34,9 +32,6 @@ public class Location {
 
     @Column(name = "state_province", length = 25)
     private String stateProvince;
-
-//    @Column(name = "country_id", length = 2)
-//    private String countryId;
 
     @OneToMany(mappedBy = "location",fetch = FetchType.LAZY)
     @JsonManagedReference
