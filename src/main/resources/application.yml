@@ -1,0 +1,18 @@
+
+spring:
+  jpa:
+    database: POSTGRESQL
+#    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/emp
+    username: hr
+    password: hr
+    driverClassName: org.postgresql.Driver
+#    dialect: org.hibernate.dialect.PostgreSQLDialect
+  sql:
+    init:
+      platform: postgres
+
+  jackson:
+    serialization:
+      FAIL_ON_EMPTY_BEANS: false
